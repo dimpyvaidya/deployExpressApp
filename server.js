@@ -1,5 +1,6 @@
 const express = require("express");
 const exphbs = require('express-handlebars');
+const productModel=require('./model/product');
 const app = express();
 app.use(express.static('static'));
 app.engine('handlebars', exphbs());
@@ -27,6 +28,11 @@ app.get("/login", (req, res) => {
 app.get("/contact", (req, res) => {
     res.render("contact", {
         title: "SMS Page"
+    });
+});
+app.get("/product", (req, res) => {
+    res.render("product", {
+    product:productModel.getAllProducts()
     });
 });
 
