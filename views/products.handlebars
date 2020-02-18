@@ -1,0 +1,23 @@
+ <div class="main-heading">
+    <br><br><br>
+    <h2>Best hotels and accomodations in Canada</h2><br>
+</div>
+<div class="hotel-container">
+    {{#each hotels}}
+        <section class="hotel_block "> 
+            <img class="hotelimg " src={{this.imageUrl}}  alt="hotelImg">
+            <div class="hotel_content">
+                <h2 class="hotelnm"><strong>{{this.title}}</strong></h2>
+                <h1 class="desc">{{this.description}}</h1>
+                <h3 class="price"><strong>CAD {{this.price}}/night</strong></h3><br>
+                <div>
+                    <img src={{this.rateImageUrl}} alt="boy" class="rating-view">
+                    <h3 class="comment">{{this.feedbacker}}</h3>
+                    <p class="cmt">{{this.feedback}}</p>
+                    <br>
+                </div>
+                <button type="button" class="button"><span>Book Now</span></button>
+            </div>
+        </section>
+        {{/each}}
+    </div>

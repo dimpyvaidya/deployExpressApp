@@ -1,0 +1,26 @@
+
+ {{#each messages}}
+<li><i class="material-icons" style="color: red; position: relative; text-align:center">error</i>
+    {{this}}</li>
+
+{{/each}} 
+
+<form method="POST"  action="" style="border:2px solid #ccc">
+  <div class="container">
+    <h1><br><br>Login</h1>
+    <hr>
+
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="uname">
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw">
+
+    <div class="clearfix">
+      <button type="submit" class="signupbtn">Login</button>
+      <button type="button" class="cancelbtn"><a href="/home">Cancel</a></button><br>
+      <h3 class="statement">Don't have an account? <a href="/userregistration" style="color:dodgerblue">Sign Up</a></h3>
+      <br><br>
+    </div>
+  </div>
+</form>
